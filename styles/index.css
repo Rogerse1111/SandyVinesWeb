@@ -1,0 +1,192 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Top Task Bar */
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .top-bar .left h1 {
+    margin: 0;
+  }
+  
+  .top-bar .right {
+    position: relative;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .dropbtn:hover {
+    background-color: #555;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #444;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #555;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Main Content */
+  main {
+    padding: 20px;
+    text-align: center;
+  }
+  
+
+
+
+ /* ###########################################################################################################################
+                                                        Footer Styling                                                         
+    ###########################################################################################################################*/
+ /* Footer Styling */
+.bottom-bar {
+    background-color: #FFDA91; /* Dark background */
+    color: #ccc; /* Light gray text */
+    padding: 20px 0;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+  }
+  
+  /* Left Section - Logo */
+  .footer-left {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .footer-logo {
+    height: 150px; /* Adjust size */
+  }
+  
+  /* Center Section - Links and Text */
+  .footer-center {
+    flex: 2;
+    text-align: center;
+  }
+  
+  .footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+    color: #fff;
+  }
+  
+  .footer-center p {
+    margin: 5px 0;
+  }
+  
+  /* Right Section - Social Icons */
+/* Fix spacing issue */
+  .footer-right a {
+    font-size: 34px;
+    margin: 0 10px;
+    color: #000000; /* Default color */
+    display: inline-flex; /* Align icon properly */
+    align-items: center; /* Center icon */
+    text-decoration: none; /* Remove any underline effect */
+  }
+  
+  /* Ensure no extra space or misalignment */
+  .footer-right i {
+    display: block; /* Prevents inline spacing issues */
+  }
+  
+  /* Define colors for each platform */
+  .footer-right a[href*="facebook.com"]:hover {
+    color: #1877F2; /* Facebook blue */
+  }
+  
+  .footer-right a[href*="twitter.com"]:hover {
+    color: #1DA1F2; /* Twitter blue */
+  }
+  
+  .footer-right a[href*="youtube.com"]:hover {
+    color: #FF0000; /* YouTube red */
+  }
+  
+  .footer-right a[href*="linkedin.com"]:hover {
+    color: #0077B5; /* LinkedIn blue */
+  }  
+
+  /* Instagram Hover Color */
+  .footer-right a[href*="instagram.com"]:hover {
+    color: #E1306C; /* Instagram pink */
+  }
+  
+  /* Email Hover Color */
+  .footer-right a[href*="mailto:"]:hover {
+    color: #ff2d2d; /* Gold for email */
+  }
+  
+  /* Copyright Section */
+  .copyright {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 12px;
+    color: #000000;
+    border-top: 1px solid #333;
+    margin-top: 10px;
+  }
+  
+  .copyright p {
+    margin: 5px 0;
+  }
+  
+  
