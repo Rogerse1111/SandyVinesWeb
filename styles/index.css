@@ -1,5 +1,7 @@
 /* General Reset */
 body {
+    background-color: #FFFFDC;
+    color: #281318;
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -10,8 +12,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000000;
-    color: white;
+    background-color: #FBDA8C;
+    color: rgb(0, 0, 0);
     padding: 10px 20px;
   }
   
@@ -22,6 +24,10 @@ body {
   .top-bar .right {
     position: relative;
   }
+
+  .top-bar-logo {
+    height: 50px; /* Adjust size */
+  }
   
   /* Dropdown Menu */
   .dropdown {
@@ -30,8 +36,8 @@ body {
   }
   
   .dropbtn {
-    background-color: #444;
-    color: white;
+    background-color: #FBDA8C;
+    color:#281318;
     padding: 10px;
     border: none;
     cursor: pointer;
@@ -46,14 +52,14 @@ body {
     display: none;
     position: absolute;
     right: 0;
-    background-color: #444;
+    background-color: #FBDA8C;
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
   
   .dropdown-content a {
-    color: white;
+    color: #281318;
     padding: 10px;
     text-decoration: none;
     display: block;
@@ -76,117 +82,111 @@ body {
 
 
 
- /* ###########################################################################################################################
-                                                        Footer Styling                                                         
-    ###########################################################################################################################*/
- /* Footer Styling */
+/* ###########################################################################################################################
+                                                        Footer Styling
+########################################################################################################################### */
 .bottom-bar {
-    background-color: #FFDA91; /* Dark background */
-    color: #ccc; /* Light gray text */
-    padding: 20px 0;
-    font-size: 14px;
-    text-align: center;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-  }
-  
-  .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 20px;
-  }
-  
-  /* Left Section - Logo */
-  .footer-left {
-    flex: 1;
-    text-align: left;
-  }
-  
-  .footer-logo {
-    height: 150px; /* Adjust size */
-  }
-  
-  /* Center Section - Links and Text */
-  .footer-center {
-    flex: 2;
-    text-align: center;
-  }
-  
-  .footer-links a {
-    color: #ccc;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-  }
-  
-  .footer-links a:hover {
-    text-decoration: underline;
-    color: #fff;
-  }
-  
-  .footer-center p {
-    margin: 5px 0;
-  }
-  
-  /* Right Section - Social Icons */
-/* Fix spacing issue */
-  .footer-right a {
-    font-size: 34px;
-    margin: 0 10px;
-    color: #000000; /* Default color */
-    display: inline-flex; /* Align icon properly */
-    align-items: center; /* Center icon */
-    text-decoration: none; /* Remove any underline effect */
-  }
-  
-  /* Ensure no extra space or misalignment */
-  .footer-right i {
-    display: block; /* Prevents inline spacing issues */
-  }
-  
-  /* Define colors for each platform */
-  .footer-right a[href*="facebook.com"]:hover {
-    color: #1877F2; /* Facebook blue */
-  }
-  
-  .footer-right a[href*="twitter.com"]:hover {
-    color: #1DA1F2; /* Twitter blue */
-  }
-  
-  .footer-right a[href*="youtube.com"]:hover {
-    color: #FF0000; /* YouTube red */
-  }
-  
-  .footer-right a[href*="linkedin.com"]:hover {
-    color: #0077B5; /* LinkedIn blue */
-  }  
+  background-color: #FBDA8C; /* Light background */
+  color: #281318; /* Dark text */
+  padding: 20px 0 10px; /* Extra padding at the bottom */
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
 
-  /* Instagram Hover Color */
-  .footer-right a[href*="instagram.com"]:hover {
-    color: #E1306C; /* Instagram pink */
-  }
-  
-  /* Email Hover Color */
-  .footer-right a[href*="mailto:"]:hover {
-    color: #ff2d2d; /* Gold for email */
-  }
-  
-  /* Copyright Section */
-  .copyright {
-    text-align: center;
-    padding-top: 10px;
-    font-size: 12px;
-    color: #000000;
-    border-top: 1px solid #333;
-    margin-top: 10px;
-  }
-  
-  .copyright p {
-    margin: 5px 0;
-  }
-  
-  
+/* Footer Main Container */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+/* Left Section - Logo */
+.footer-left {
+  flex: 1;
+  text-align: left;
+}
+
+.footer-logo {
+  height: 120px; 
+}
+
+/* Footer Middle Section - Socials */
+.footer-middle {
+  flex: 1; /* Take up equal space */
+  text-align: center;
+}
+
+.social-icons {
+  display: flex; /* Display icons horizontally */
+  justify-content: center; /* Center the icons */
+  gap: 30px; /* Space between Follow Us and Contact Us groups */
+}
+
+.social-group, .contact-group {
+  text-align: center; /* Center-align text and icons */
+}
+
+.social-group p, .contact-group p {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 0 5px; /* Space below the text */
+}
+
+.footer-middle a {
+  font-size: 24px; /* Icon size */
+  margin: 0 10px;
+  color: #281318; /* Default icon color */
+  text-decoration: none;
+}
+
+.footer-middle a:hover {
+  color: #E1306C; /* Instagram hover color */
+}
+
+/* Ensure alignment across all devices */
+.social-group a, .contact-group a {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Right Section - Legal Links */
+.footer-right {
+  flex: 1;
+  text-align: right;
+}
+
+.footer-links {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.footer-links a {
+  color: #281318;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+/* Copyright Section */
+.copyright {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 12px;
+  color: #281318;
+  border-top: 1px solid #333;
+  margin-top: 20px;
+}
+
+.copyright p {
+  margin: 0;
+}
