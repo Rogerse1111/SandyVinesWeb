@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hunting Land Showcase</title>
+  <link rel="stylesheet" href="/styles/gallery.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <!-- Top Task Bar -->
+  <header class="top-bar">
+    <div class="left">
+      <img src="/images/wordLogo.png" alt="SandyVines Logo" class="top-bar-logo">
+    </div>
+    <div class="right">
+      <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+          <a href="/">Home</a>
+          <a href="/trail-cams">Trail Cam Gallery</a>
+          <a href="/guests">Guest Photos</a>
+          <a href="/merchandise">Merchandise</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Gallery Content -->
+    <main>
+        <div class="gallery-container">
+            <h2>Trail Cam Gallery</h2>
+            <p>Explore our trail cam pics! Here we post all our greatest trail cam pics.</p>
+        
+            <div class="gallery-grid">
+                <% galleryImages.forEach((image, index) => { %>
+                    <img src="<%= image.src %>" alt="<%= image.alt %>" onclick="openLightbox(<%= index %>)">
+                <% }); %>
+            </div>            
+        </div>
+
+        <!-- Lightbox Overlay -->
+        <div id="lightbox" class="lightbox">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <div class="prev" onclick="changeSlide(-1)">&#10094;</div>
+            <div class="next" onclick="changeSlide(1)">&#10095;</div>
+        </div>
+
+        <script src="/scripts/gallery.js"></script>
+    </main>
+
+  <!-- Bottom Bar -->
+    <!-- Bottom Bar -->
+    <footer class="bottom-bar">
+        <div class="footer-container">
+          
+          <!-- Left: Logo -->
+          <div class="footer-left">
+            <img src="/images/logo.png" alt="SandyVines Logo" class="footer-logo">
+          </div>
+      
+
+          <!-- Right: Legal Links and Socials -->
+          <div class="footer-right">
+            <div class="social-icons">
+              <div class="social-group">
+                <p>Follow Us!</p>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+              <div class="contact-group">
+                <p>Contact Us!</p>
+                <a href="mailto:your-email@example.com" target="_blank" aria-label="Email">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+
+            <p class="footer-links">
+              <a href="/terms">Terms of Use</a> |
+              <a href="/privacy">Privacy Policy</a> |
+              <a href="/trademarks">Trademarks</a> |
+              <a href="/license">License's</a>
+            </p>
+          </div>
+        </div>
+      
+        <!-- Copyright Section -->
+        <div class="copyright">
+          <p>&copy; <%= year %> Sandy Vines Ranch. All Rights Reserved.</p>
+          <p>All content, images, and trademarks are the property of Sandy Vines Ranch and are protected under applicable copyright laws. Unauthorized use is strictly prohibited.</p>
+        </div>
+      </footer>      
+</body>
+</html>
