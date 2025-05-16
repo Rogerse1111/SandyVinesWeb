@@ -20,8 +20,8 @@
     <!--   RIGHT – horizontal links   -->
     <nav class="nav-links">
       <a href="/">Home</a>
+      <a href="/blog">Blog</a>
       <a href="/gallery">Trail Cam Gallery</a>
-      <a href="/merchandise">Merchandise</a
     </nav>
   </header>
 
@@ -29,31 +29,32 @@
   <main>
     <h2>Welcome!</h2>
     <p>This is where you can showcase your hunting land, trail cam photos, guest experiences, and merchandise. Let's build it step by step!</p>
-    <p>|</p>
-    <p>|</p>
-    <p>|</p>
-    <p>|</p>
-    <p>|</p>
-    <p>|</p>
-    <p>|</p>
-    <p>|</p>
-    <p>|</p>
-    <p>|</p>
-    <p>|</p>
-    <p>|</p>
-    <p>|</p>
-    <p>|</p>
-    <p>|</p>
-    <p>|</p>
-    <p>|</p>
-    <p>|</p>
-    <p>|</p>
-    <p>|</p>
-    <p>|</p>
-    <p>|</p>
-    <p>|</p>
-    <p>|</p>
-    <p>|</p>
+    
+    <section class="home-blog-carousel">
+      <h2>Latest from the Blog</h2>
+      <div class="carousel-wrapper">
+        <div class="carousel-track">
+          <% recentPosts.forEach(post => { %>
+            <div class="carousel-slide">
+              <div class="slide-flex">
+                <div class="slide-img">
+                  <% if (post.image_url) { %>
+                    <img src="<%= post.image_url %>" alt="Blog image">
+                  <% } %>
+                </div>
+                <div class="slide-text">
+                  <h3><%= post.title %></h3>
+                  <p class="blog-meta"><%= new Date(post.date_posted).toDateString() %></p>
+                  <p><%= post.content.substring(0, 100) %>...</p>
+                  <a href="/blog" class="read-more">Read More</a>
+                </div>
+              </div>
+            </div>
+          <% }); %>
+        </div>
+      </div>
+    </section>       
+    
   </main>
 
   <!-- Bottom Bar -->
