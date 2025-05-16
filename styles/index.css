@@ -175,64 +175,104 @@ margin: 0;
 /* ---------------------------------------------------------------------------------
  MOBILE TWEAKS  (screens ≤ 768 px wide)
  --------------------------------------------------------------------------------- */
-@media (max-width: 768px) {
-
-/* ---- Top bar ---------------------------------------------------- */
+/* 👉 Global adjustments for top bar */
 .top-bar {
-  flex-wrap: wrap;           /* allow logo + links to wrap */
-  padding: 8px 12px;
+  display: flex;
+  align-items: center;       /* vertically center logo + links */
+  padding: 12px 24px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
 }
 
 .top-bar-logo {
-  height: 40px;              /* smaller logo */
+  height: 45px;              /* slightly smaller so nav aligns */
 }
 
 .nav-links {
-  flex: 1 1 100%;            /* full width under the logo */
-  justify-content: center;   /* center links */
-  gap: 16px;
-  margin: 6px 0 0;
+  display: flex;
+  gap: 24px;
+  margin-left: auto;         /* push links to the right on desktop */
+  align-items: center;
+  justify-content: flex-end; /* ensure they're flush right */
 }
 
 .nav-links a {
-  font-size: 14px;
+  color: #281318;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 0;
+  transition: color 0.2s ease-in-out;
 }
 
-/* ---- Gallery grid ---------------------------------------------- */
-.gallery-grid {
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 6px;
-  padding: 10px;
+.nav-links a:hover {
+  color: #555;
 }
 
-/* ---- Footer ----------------------------------------------------- */
-.footer-container {
-  flex-direction: column;
-  text-align: center;
-}
+/* ---------------------------------------------------------------------------------
+   MOBILE TWEAKS  (screens ≤ 768 px wide)
+   --------------------------------------------------------------------------------- */
+@media (max-width: 768px) {
 
-.footer-left,
-.footer-right {
-  flex: none;
-  margin: 10px 0;
-}
+  /* ---- Top bar ---------------------------------------------------- */
+  .top-bar {
+    flex-wrap: wrap;
+    padding: 8px 12px;
+  }
 
-.footer-logo {
-  height: 90px;
-}
+  .top-bar-logo {
+    height: 40px;            /* scale down further on small screens */
+  }
 
-.social-icons {
-  flex-direction: column;
-  gap: 12px;
-}
+  .nav-links {
+    flex: 1 1 100%;          /* full width row */
+    justify-content: center; /* centered links for mobile */
+    gap: 16px;
+    margin-left: 0;          /* reset auto margin */
+    margin-top: 6px;
+  }
 
-.footer-right a {
-  font-size: 28px;
-}
+  .nav-links a {
+    font-size: 14px;
+  }
 
-.footer-right .footer-links a {
-  display: inline-block;
-  margin: 4px 6px;
-  font-size: 13px;
-}
+  /* ---- Gallery grid ---------------------------------------------- */
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 6px;
+    padding: 10px;
+  }
+
+  /* ---- Footer ----------------------------------------------------- */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left, .footer-right {
+    flex: none;
+    margin: 10px 0;
+  }
+
+  .footer-logo {
+    height: 90px;
+  }
+
+  .social-icons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-right a {
+    font-size: 28px;
+  }
+
+  .footer-right .footer-links a {
+    display: inline-block;
+    margin: 4px 6px;
+    font-size: 13px;
+  }
 }

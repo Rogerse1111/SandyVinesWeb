@@ -1,4 +1,15 @@
 require('dotenv').config();
+const { Pool } = require('pg');
+
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false, // Required for Render connections
+  },
+});
+
+module.exports = pool;
+
 
 const folderId = process.env.GOOGLE_DRIVE_FOLDER_ID;
 const apiKey = process.env.GOOGLE_DRIVE_API_KEY;
@@ -79,3 +90,4 @@ app.listen(PORT, () => {
 app.use((req, res) => {
   res.status(404).send("404 - Page Not Found");
 });
+
