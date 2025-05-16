@@ -2,28 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hunting Land Showcase</title>
   <link rel="stylesheet" href="/styles/gallery.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-  <!-- Top Task Bar -->
-<header class="top-bar">
-  <!--   LEFT  – logo stays exactly as you had it   -->
-  <div class="left">
-    <img src="/images/wordLogo.png"
-         alt="Sandy Vines Logo"
-         class="top-bar-logo">
-  </div>
-
-  <!--   RIGHT – horizontal links   -->
-  <nav class="nav-links">
-    <a href="/">Home</a>
+  <!-- Top Bar -->
+  <header class="top-bar">
+    <div class="left">
+      <img src="/images/wordLogo.png" alt="Sandy Vines Logo" class="top-bar-logo">
+    </div>
+    <nav class="nav-links">
+      <a href="/">Home</a>
       <a href="/blog">Blog</a>
       <a href="/gallery">Trail Cam Gallery</a>
-  </nav>
-</header>
+    </nav>
+  </header>
 
   <!-- Gallery Content -->
     <main>
@@ -51,46 +45,39 @@
 
   <!-- Bottom Bar -->
     <!-- Bottom Bar -->
-    <footer class="bottom-bar">
-        <div class="footer-container">
-          
-          <!-- Left: Logo -->
-          <div class="footer-left">
-            <img src="/images/logo.png" alt="SandyVines Logo" class="footer-logo">
+    <!-- Footer -->
+  <footer class="bottom-bar">
+    <div class="footer-container">
+      <div class="footer-left">
+        <img src="/images/logo.png" alt="SandyVines Logo" class="footer-logo">
+      </div>
+      <div class="footer-right">
+        <div class="social-icons">
+          <div class="social-group">
+            <p>Follow Us!</p>
+            <a href="https://www.instagram.com/p/DIuE8mISGPd/" target="_blank" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
           </div>
-      
-
-          <!-- Right: Legal Links and Socials -->
-          <div class="footer-right">
-            <div class="social-icons">
-              <div class="social-group">
-                <p>Follow Us!</p>
-                <a href="https://www.instagram.com/p/DIuE8mISGPd/" target="_blank" aria-label="Instagram">
-                  <i class="fa-brands fa-instagram"></i>
-                </a>
-              </div>
-              <div class="contact-group">
-                <p>Contact Us!</p>
-                <a href="mailto:sandyvinesranch14@gmail.com" target="_blank" aria-label="Email">
-                  <i class="fa-solid fa-envelope"></i>
-                </a>
-              </div>
-            </div>
-
-            <p class="footer-links">
-              <a href="/terms">Terms of Use</a> |
-              <a href="/privacy">Privacy Policy</a> |
-              <a href="/trademarks">Trademarks</a> |
-              <a href="/license">License's</a>
-            </p>
+          <div class="contact-group">
+            <p>Contact Us!</p>
+            <a href="mailto:sandyvinesranch14@gmail.com" target="_blank" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
           </div>
         </div>
-      
-        <!-- Copyright Section -->
-        <div class="copyright">
-          <p>&copy; <%= year %> Sandy Vines Ranch. All Rights Reserved.</p>
-          <p>All content, images, and trademarks are the property of Sandy Vines Ranch and are protected under applicable copyright laws. Unauthorized use is strictly prohibited.</p>
-        </div>
-      </footer>      
+        <p class="footer-links">
+          <a href="/terms">Terms of Use</a> |
+          <a href="/privacy">Privacy Policy</a> |
+          <a href="/trademarks">Trademarks</a> |
+          <a href="/license">License's</a>
+        </p>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; <%= year %> Sandy Vines Ranch. All Rights Reserved.</p>
+      <p>All content, images, and trademarks are the property of Sandy Vines Ranch and are protected under applicable copyright laws.</p>
+    </div>
+  </footer>     
 </body>
 </html>
