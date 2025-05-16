@@ -118,48 +118,25 @@ body {
     height: 50px; /* Adjust size */
   }
   
-  /* Dropdown Menu */
-  .dropdown {
-    position: relative;
-    display: inline-block;
+  /* Horizontal nav – right aligned */
+  .nav-links {
+    display: flex;
+    gap: 24px;
+    margin-left: auto;     /* pushes links to the far right */
+    align-items: center;
   }
-  
-  .dropbtn {
-    background-color: #FBDA8C;
-    color:#281318;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .dropbtn:hover {
-    background-color: #555;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #FBDA8C;
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
+
+  .nav-links a {
     color: #281318;
-    padding: 10px;
     text-decoration: none;
-    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 0;
+    transition: color 0.2s;
   }
-  
-  .dropdown-content a:hover {
-    background-color: #555;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
+
+  .nav-links a:hover {
+    color: #555;           /* darker on hover */
   }
   
   /* Main Content */

@@ -1,4 +1,7 @@
-// AIzaSyD02RZxp740i1A_TLoOkEBb_zatCp15Gk0
+require('dotenv').config();
+
+const folderId = process.env.GOOGLE_DRIVE_FOLDER_ID;
+const apiKey = process.env.GOOGLE_DRIVE_API_KEY;
 
 const express = require('express');
 const path = require('path');
@@ -6,10 +9,6 @@ const axios = require('axios');
 
 const app = express();
 const PORT = 3000;
-
-// Google Drive API Setup
-const GOOGLE_DRIVE_FOLDER_ID = "1SPJQvHZcBY2cUK9sbtkTwHlCv9CY-im2";
-const GOOGLE_DRIVE_API_KEY = "AIzaSyD02RZxp740i1A_TLoOkEBb_zatCp15Gk0";
 
 // Set EJS as the templating engine
 app.set('view engine', 'ejs');
@@ -37,7 +36,7 @@ app.get('/', (req, res) => {
 async function getGoogleDriveImages() {
   try {
     const response = await axios.get(
-      `https://www.googleapis.com/drive/v3/files?q='${GOOGLE_DRIVE_FOLDER_ID}'+in+parents&key=${GOOGLE_DRIVE_API_KEY}&fields=files(id,name,mimeType)`
+      `https://www.googleapis.com/drive/v3/files?q='${folderId}'+in+parents&key=${apiKey}&fields=files(id,name,mimeType)`
     );
 
     const files = response.data.files;
