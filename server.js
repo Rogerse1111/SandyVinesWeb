@@ -176,3 +176,11 @@ app.use((req, res) => {
   res.status(404).send("404 - Page Not Found");
 });
 
+
+const getGear = require('./utils/amazonGear');
+
+app.get('/', async (req, res) => {
+  const recentPosts = await getRecentPosts();   // your existing call
+  const gear        = await getGear();          // new
+  res.render('index', { recentPosts, gear });
+});
