@@ -1,0 +1,173 @@
+/* General Reset */
+body {
+    background-color: #FFFFDC;
+    color: #281318;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  
+  /* ###########################################################################################################################
+                                                        Top   Styling
+  ########################################################################################################################### */
+  
+  /* Top Task Bar */
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FBDA8C;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+  }
+
+  /* === Sticky / shrink top-bar (added 2025-05-19) === */
+  .top-bar        { position: sticky; top: 0; z-index: 100; transition: padding .25s, box-shadow .25s; }
+  .top-bar.shrink { padding: 4px 16px; box-shadow: 0 2px 6px rgba(0,0,0,.15); }
+
+  .top-bar .left h1 {
+    margin: 0;
+  }
+  
+  .top-bar .right {
+    position: relative;
+  }
+  
+  .top-bar-logo {
+    height: 50px; /* Adjust size */
+  }
+  
+  /* Horizontal nav – right aligned */
+  .nav-links {
+    display: flex;
+    gap: 24px;
+    margin-left: auto;     /* pushes links to the far right */
+    align-items: center;
+  }
+  
+  .nav-links a {
+    color: #281318;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 0;
+    transition: color 0.2s;
+  }
+  
+  .nav-links a:hover {
+    color: #555;           /* darker on hover */
+  }
+  
+  /* Main Content */
+  main {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* ###########################################################################################################################
+                                                        Footer Styling
+  ########################################################################################################################### */
+  .bottom-bar {
+  background-color: #FBDA8C; /* Light background */
+  color: #281318; /* Dark text */
+  padding: 20px 0 10px; /* Extra padding at the bottom */
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  }
+  
+  /* Footer Main Container */
+  .footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  }
+  
+  /* Left Section - Logo */
+  .footer-left {
+  flex: 0.5;
+  text-align: left;
+  }
+  
+  .footer-logo {
+  height: 120px; 
+  }
+  
+  /* Footer Right Section */
+  .footer-right {
+  text-align: center; /* Center-align all content */
+  margin-left: auto; /* Push the entire section to the right */
+  }
+  
+  .footer-right .footer-links {
+  margin-bottom: 15px; /* Space between legal links and social icons */
+  }
+  
+  .footer-right .footer-links a {
+  color: #281318; /* Link color */
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+  font-weight: bold;
+  }
+  
+  .footer-right .footer-links a:hover {
+  text-decoration: underline;
+  color: #000; /* Slightly darker hover effect */
+  }
+  
+  /* Social Icons Wrapper */
+  .social-icons {
+  display: flex; /* Align the social groups horizontally */
+  justify-content: center; /* Center the icons */
+  gap: 50px; /* Space between "Follow Us" and "Contact Us" */
+  }
+  
+  /* Individual Social Group Styling */
+  .social-group, .contact-group {
+  text-align: center; /* Center-align the text and icons */
+  }
+  
+  .social-group p, .contact-group p {
+  font-size: 18px; /* Label text size */
+  font-weight: bold;
+  margin: 0 0 0px; /* Add space below the labels */
+  }
+  
+  /* Icon Styling */
+  .footer-right a {
+  font-size: 35px; /* Icon size */
+  color: #281318; /* Default icon color */
+  text-decoration: none; /* Remove underline */
+  }
+  
+  .footer-right a:hover {
+  color: #E1306C; /* Instagram hover color */
+  }
+  
+  /* Label Styling */
+  .social-group p {
+  font-size: 18px; /* Label text size */
+  font-weight: bold;
+  margin: 0; /* No extra margin for labels */
+  }
+  
+  /* Copyright Section */
+  .copyright {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 12px;
+  color: #281318;
+  border-top: 1px solid #333;
+  margin-top: 0px;
+  }
+  
+  .copyright p {
+  margin: 0;
+  }

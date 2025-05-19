@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Hunting Land Showcase</title>
+  <link rel="stylesheet" href="/styles/base.css">
   <link rel="stylesheet" href="/styles/gallery.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
@@ -33,7 +34,9 @@
         
             <div class="gallery-grid">
                 <% galleryImages.forEach((image, index) => { %>
-                    <img src="<%= image.src %>" alt="<%= image.alt %>" onclick="openLightbox(<%= index %>)">
+                    <img src="<%= image.src %>" alt="<%= image.alt %>"
+                          loading="lazy" width="300" height="200"
+                          onclick="openLightbox(<%= index %>)">
                 <% }); %>
             </div>            
         </div>

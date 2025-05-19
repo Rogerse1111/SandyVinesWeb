@@ -27,3 +27,10 @@ function changeSlide(step) {
 
     document.getElementById("lightbox-img").src = images[currentIndex].src;
 }
+
+document.addEventListener('keydown', e => {
+  if (lightbox.style.display !== 'flex') return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowRight') changeSlide(1);
+  if (e.key === 'ArrowLeft')  changeSlide(-1);
+});

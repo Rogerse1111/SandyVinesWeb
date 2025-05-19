@@ -3,8 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Blog | Sandy Vines</title>
+  <link rel="stylesheet" href="/styles/base.css">
   <link rel="stylesheet" href="/styles/blog.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <meta name="description"         content="Whitetail hunting stories, trail-cam photos, and info at Sandy Vines Ranch.">
+  <meta property="og:title"        content="Sandy Vines Ranch">
+  <meta property="og:description"  content="Follow our trail-cam gallery and ranch blog.">
+  <meta property="og:image"        content="https://sandyvinesranch.onrender.com/images/og.jpg">
+  <meta name="twitter:card"        content="summary_large_image">
 </head>
 <body>
   <!-- Top Bar -->
@@ -17,12 +24,6 @@
       <a href="/blog">Blog</a>
       <a href="/gallery">Trail Cam Gallery</a>
     </nav>
-
-    <meta name="description"         content="Whitetail hunting stories, trail-cam photos, and info at Sandy Vines Ranch.">
-    <meta property="og:title"        content="Sandy Vines Ranch">
-    <meta property="og:description"  content="Follow our trail-cam gallery and ranch blog.">
-    <meta property="og:image"        content="https://sandyvinesranch.onrender.com/images/og.jpg">
-    <meta name="twitter:card"        content="summary_large_image">
   </header>
 
   <!-- Blog Posts -->
@@ -39,7 +40,10 @@
                 <div class="blog-post-flex">
                   <div class="blog-image-wrapper">
                     <% if (post.image_url) { %>
-                      <img src="<%= post.image_url %>" alt="Post image" class="blog-image">
+                      <img src="<%= post.image_url %>" 
+                          alt="<%= post.title %> photo" 
+                          loading="lazy" width="300" height="200"
+                          class="blog-image">
                     <% } %>
                   </div>
                   <div class="blog-text-content">

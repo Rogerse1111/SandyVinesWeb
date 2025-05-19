@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Hunting Land Showcase</title>
+  <link rel="stylesheet" href="/styles/base.css">
   <link rel="stylesheet" href="/styles/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
@@ -14,6 +15,25 @@
 
 </head>
 <body>
+  <section class="hero-banner">
+  <!-- Visually hidden H1 keeps SEO while the image carries the look -->
+  <h1 class="sr-only">Sandy Vines Ranch</h1>
+
+  <div class="hero-inner">
+    <!-- Picture element = modern + fallback -->
+    <picture class="hero-logo">
+      <!-- Modern formats first -->
+      <source srcset="/images/LogoTransparent.png 1x, /images/LogoTransparent.png 2x" type="image/webp">
+      <!-- SVG fallback -->
+      <img src="/images/LogoTransparent.png"
+          alt="Sandy Vines Ranch"
+          width="800" height="180"
+          loading="eager" 
+          class="hero-title">
+    </picture>
+  </div>
+</section>
+
   <!-- Top Bar -->
   <header class="top-bar">
     <div class="left">
@@ -28,13 +48,6 @@
 
   <!-- Main Content -->
   <main>
-    <section class="hero-banner">
-      <div class="hero-inner">
-        <h1>Sandy Vines Ranch</h1>
-        <a href="/gallery" class="cta-btn">See the Herd</a>
-      </div>
-    </section>
-
     <h2>Welcome!</h2>
     <p>This is where you can showcase your hunting land, trail cam photos, guest experiences, and merchandise. Let's build it step by step!</p>
     
