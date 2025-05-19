@@ -90,6 +90,10 @@ app.get('/blog', async (req, res) => {
   }
 });
 
+app.get('/blog/:slug', async (req, res) => {
+  const post = await getPostBySlug(req.params.slug);   // your helper
+  res.render('blogPost', { post });
+});
 
 // Function to fetch blog images from a separate Google Drive folder
 async function getGoogleDriveBlogImages() {

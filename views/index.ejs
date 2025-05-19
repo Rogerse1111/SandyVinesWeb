@@ -5,6 +5,13 @@
   <title>Hunting Land Showcase</title>
   <link rel="stylesheet" href="/styles/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <meta name="description"         content="Whitetail hunting stories, trail-cam photos, and info at Sandy Vines Ranch.">
+  <meta property="og:title"        content="Sandy Vines Ranch">
+  <meta property="og:description"  content="Follow our trail-cam gallery and ranch blog.">
+  <meta property="og:image"        content="https://sandyvinesranch.onrender.com/images/og.jpg">
+  <meta name="twitter:card"        content="summary_large_image">
+
 </head>
 <body>
   <!-- Top Bar -->
@@ -21,6 +28,13 @@
 
   <!-- Main Content -->
   <main>
+    <section class="hero-banner">
+      <div class="hero-inner">
+        <h1>Sandy Vines Ranch</h1>
+        <a href="/gallery" class="cta-btn">See the Herd</a>
+      </div>
+    </section>
+
     <h2>Welcome!</h2>
     <p>This is where you can showcase your hunting land, trail cam photos, guest experiences, and merchandise. Let's build it step by step!</p>
     
@@ -40,7 +54,7 @@
                   <h3><%= post.title %></h3>
                   <p class="blog-meta"><%= new Date(post.date_posted).toDateString() %></p>
                   <p><%= post.content.substring(0, 100) %>...</p>
-                  <a href="/blog" class="read-more">Read More</a>
+                  <a class="read-more" href="/blog/<%= post.slug %>">Read More »</a>
                 </div>
               </div>
             </div>
@@ -48,12 +62,38 @@
         </div>
       </div>
     </section>       
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
     
   </main>
 
   <!-- Bottom Bar -->
-    <!-- Bottom Bar -->
-    <!-- Footer -->
   <footer class="bottom-bar">
     <div class="footer-container">
       <div class="footer-left">
@@ -63,7 +103,7 @@
         <div class="social-icons">
           <div class="social-group">
             <p>Follow Us!</p>
-            <a href="https://www.instagram.com/p/DIuE8mISGPd/" target="_blank" aria-label="Instagram">
+            <a href="https://www.instagram.com/sandyvinesranch/" target="_blank" aria-label="Instagram">
               <i class="fa-brands fa-instagram"></i>
             </a>
           </div>
@@ -78,7 +118,7 @@
           <a href="/terms">Terms of Use</a> |
           <a href="/privacy">Privacy Policy</a> |
           <a href="/trademarks">Trademarks</a> |
-          <a href="/license">License's</a>
+          <a href="/license">Licenses</a>
         </p>
       </div>
     </div>
@@ -86,6 +126,7 @@
       <p>&copy; <%= year %> Sandy Vines Ranch. All Rights Reserved.</p>
       <p>All content, images, and trademarks are the property of Sandy Vines Ranch and are protected under applicable copyright laws.</p>
     </div>
-  </footer>     
+  </footer>   
+  <script src="/scripts/nav.js" defer></script>  
 </body>
 </html>
