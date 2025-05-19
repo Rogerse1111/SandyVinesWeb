@@ -23,11 +23,11 @@
     <!-- Picture element = modern + fallback -->
     <picture class="hero-logo">
       <!-- Modern formats first -->
-      <source srcset="/images/LogoTransparent.png 1x, /images/LogoTransparent.png 2x" type="image/webp">
+      <source srcset="/images/MainLogoTransparent.png 1x, /images/MainLogoTransparent.png 2x" type="image/webp">
       <!-- SVG fallback -->
-      <img src="/images/LogoTransparent.png"
+      <img src="/images/MainLogoTransparent.png"
           alt="Sandy Vines Ranch"
-          width="800" height="180"
+          width="350" height="180"
           loading="eager" 
           class="hero-title">
     </picture>
@@ -51,30 +51,41 @@
     <h2>Welcome!</h2>
     <p>This is where you can showcase your hunting land, trail cam photos, guest experiences, and merchandise. Let's build it step by step!</p>
     
-    <section class="home-blog-carousel">
-      <h2>Latest from the Blog</h2>
-      <div class="carousel-wrapper">
+    <h2>Latest from the Blog</h2>
+
+    <div class="carousel-outer">
+      <div class="carousel-viewport">
         <div class="carousel-track">
           <% recentPosts.forEach(post => { %>
             <div class="carousel-slide">
-              <div class="slide-flex">
-                <div class="slide-img">
-                  <% if (post.image_url) { %>
-                    <img src="<%= post.image_url %>" alt="Blog image">
-                  <% } %>
-                </div>
-                <div class="slide-text">
-                  <h3><%= post.title %></h3>
-                  <p class="blog-meta"><%= new Date(post.date_posted).toDateString() %></p>
-                  <p><%= post.content.substring(0, 100) %>...</p>
-                  <a class="read-more" href="/blog/<%= post.slug %>">Read More »</a>
-                </div>
+              <div class="slide-img"
+                  style="--bg:url('<%= post.image_url %>')">
+                <img src="<%= post.image_url %>"
+                    alt="<%= post.title %> image"
+                    loading="lazy" width="640" height="360">
+              </div>
+
+              <div class="slide-text">
+                <h3><%= post.title %></h3>
+                <p class="blog-meta">
+                  <%= new Date(post.date_posted).toLocaleDateString() %>
+                  · <%= post.author || 'Sandy Vines' %>
+                </p>
+                <p><%= post.content.substring(0, 110) %>…</p>
+                <a class="read-more" href="/blog/<%= post.slug %>">Read More »</a>
               </div>
             </div>
-          <% }); %>
+          <% }) %>
         </div>
       </div>
-    </section>       
+
+      <!-- centred arrow bar -->
+      <div class="carousel-controls">
+        <button class="carousel-arrow prev" aria-label="Previous slide">‹</button>
+        <button class="carousel-arrow next" aria-label="Next slide">›</button>
+      </div>
+    </div>
+
     <p>|</p>
     <p>|</p>
     <p>|</p>
@@ -140,6 +151,7 @@
       <p>All content, images, and trademarks are the property of Sandy Vines Ranch and are protected under applicable copyright laws.</p>
     </div>
   </footer>   
+  <script src="/scripts/carousel.js" defer></script>
   <script src="/scripts/nav.js" defer></script>  
 </body>
 </html>

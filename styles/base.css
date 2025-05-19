@@ -11,6 +11,9 @@ body {
   /* ###########################################################################################################################
                                                         Top   Styling
   ########################################################################################################################### */
+  /* 281318
+     FBDA8C
+  */
   
   /* Top Task Bar */
   .top-bar {
@@ -38,26 +41,52 @@ body {
     height: 50px; /* Adjust size */
   }
   
-  /* Horizontal nav – right aligned */
-  .nav-links {
+  /* horizontal nav – right aligned */
+    .nav-links {
     display: flex;
     gap: 24px;
-    margin-left: auto;     /* pushes links to the far right */
+    margin-left: auto;      /* pushes links to the far right */
     align-items: center;
-  }
-  
-  .nav-links a {
-    color: #281318;
+    }
+
+    /* default link style */
+    .nav-links a {
+    color: #281318;         /* ranch brown */
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
     padding: 8px 0;
-    transition: color 0.2s;
-  }
-  
-  .nav-links a:hover {
-    color: #555;           /* darker on hover */
-  }
+    transition: color .2s ease;
+    }
+
+    /* hover / keyboard focus */
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+    color: #ff7e00;         /* hunter-orange pop */
+    }
+
+    /* optional: current page indicator */
+    .nav-links a[aria-current="page"] {
+    color: #ff7e00;
+    }
+
+    .nav-links a {
+    position: relative;
+    }
+
+    .nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 2px;
+    background: #ff7e00;
+    transition: width .2s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a:focus-visible::after {
+    width: 100%;
+    }
   
   /* Main Content */
   main {
@@ -119,7 +148,7 @@ body {
   
   .footer-right .footer-links a:hover {
   text-decoration: underline;
-  color: #000; /* Slightly darker hover effect */
+  color: #ff7e00; /* Slightly darker hover effect */
   }
   
   /* Social Icons Wrapper */
@@ -148,7 +177,7 @@ body {
   }
   
   .footer-right a:hover {
-  color: #E1306C; /* Instagram hover color */
+  color: #ff7e00; /* Instagram hover color */
   }
   
   /* Label Styling */
